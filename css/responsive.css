@@ -1,0 +1,159 @@
+@media (max-width: 768px) {
+  /*==================== MENU ====================*/
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: none; /* Sembunyikan di desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .menu-item.active {
+    color: var(--warna-utama);
+    background-color: transparent; /* Ubah ke transparan */
+    border-radius: 10px;
+  }
+  .menu-item.active:hover {
+    color: var(--warna-begron); /* Ubah warna saat hover */
+    background-color: var(--warna-utama); /* Ubah ke warna utama */
+  }
+  .hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--warna-utama);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Menu Dropdown */
+  .menu {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--warna-begron);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+  }
+
+  /* .menu a {
+    text-decoration: none;
+    color: var(--warna-utama);
+  } */
+
+  .menu a:hover {
+    color: var(--warna-biru);
+  }
+
+  /* Tampilkan hamburger menu di mobile */
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: flex;
+    }
+
+    .menu {
+      display: none; /* Sembunyikan menu di mobile */
+    }
+
+    .menu.active {
+      display: flex; /* Tampilkan menu saat aktif */
+    }
+  }
+  /*==================== LOADER ====================*/
+  .loader {
+    font-size: 30px; /* Ukuran lebih kecil */
+    gap: 8px; /* Jarak antar huruf lebih kecil */
+  }
+
+  .loader span {
+    min-width: 35px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .loader:before {
+    width: 50%; /* Lebar bayangan lebih kecil */
+    height: 5px; /* Tinggi bayangan lebih kecil */
+    bottom: -6px; /* Posisi bayangan sedikit naik */
+  }
+  .container {
+    flex-direction: column; /* Ubah menjadi vertikal untuk layar kecil */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+  }
+  .kontainer {
+    flex-direction: column; /* Ubah menjadi vertikal untuk layar kecil */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    overflow: hidden;
+  }
+  .card-project {
+    padding: 10px;
+  }
+  /* hero */
+  .hero-section {
+    padding-top: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-left h3,
+  .hero-left p {
+    white-space: normal; /* Izinkan teks membungkus */
+    word-wrap: break-word; /* Pecah kata jika terlalu panjang */
+  }
+
+  .hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Tambahkan jarak atas */
+  }
+
+  .hero-right img {
+    width: 256px;
+  }
+
+  /* about me */
+  .container .card-about-me {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .container .card-about-me img {
+    width: 298px;
+    height: auto;
+  }
+
+  /* experiennce */
+  .container .card-internshipp {
+    max-width: 300px;
+    height: auto;
+  }
+  .container .card-internshipp img {
+    width: 298px;
+    height: auto;
+  }
+
+  /* projects */
+  .kontainer .card-project {
+    max-width: 300px;
+    height: auto;
+  }
+  .kontainer .card-project img {
+    width: 298px;
+    height: auto;
+  }
+}

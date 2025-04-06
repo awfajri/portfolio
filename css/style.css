@@ -1,0 +1,537 @@
+:root {
+  --warna-utama: #f5f5f5;
+  --warna-begron: #2990ff;
+  --warna-biru: #0046a8;
+}
+
+body,
+html {
+  background: linear-gradient(to right, #4e9bed, #1b7aff);
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
+  padding: 5rem 0;
+  font-family: "plus jakarta sans";
+  text-decoration: none;
+}
+/*==================== LOADER ====================*/
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-out;
+}
+.loader-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+
+.loader span {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #aa41fe;
+  background-color: #dbd5f3;
+  border-radius: 8px;
+  min-width: 60px;
+  height: 70px;
+  font-size: 40px;
+  animation: peek 1.5s both infinite;
+  animation-delay: var(--d);
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: shadow 1.5s infinite ease-in-out;
+}
+
+/* Animasi bayangan */
+@keyframes shadow {
+  0%,
+  100% {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-50%) scaleX(1.2);
+    opacity: 0.4;
+  }
+}
+
+@keyframes peek {
+  25% {
+    transform: rotateX(30deg) rotate(-13deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(3deg) scale(1.1);
+    color: #6a45ed;
+  }
+}
+
+.container {
+  margin: 10px auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row; /* Atur elemen anak agar sejajar secara horizontal */
+  justify-content: center; /* Pusatkan elemen secara horizontal */
+  align-items: flex-start; /* Atur elemen sejajar di bagian atas */
+  gap: 20px; /* Tambahkan jarak antar card */
+}
+/* Kontainer Scroll Horizontal */
+.kontainer {
+  overflow-y: hidden;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #4facfe #f1f1f1;
+}
+
+.kontainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.kontainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.kontainer::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  border-radius: 10px;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: var(--warna-begron);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrap {
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--warna-utama);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-wrap a {
+  text-decoration: none;
+}
+.menu-item {
+  margin-left: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  color: var(--warna-utama);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  color: var(--warna-biru);
+  background-color: var(--warna-utama);
+  border-radius: 10px;
+}
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  margin-bottom: 15rem;
+  opacity: 0; /* Awalnya tidak terlihat */
+  transform: translateY(50px); /* Geser ke bawah */
+  transition: opacity 0.8s ease-in, transform 0.8s ease-in; /* Animasi transisi */
+}
+
+.hero-section.show {
+  opacity: 1; /* Muncul */
+  transform: translateY(0); /* Kembali ke posisi semula */
+}
+
+.hero-section .hero-left h3 {
+  color: var(--warna-utama);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: -15px;
+}
+.hero-section .hero-left p {
+  color: var(--warna-utama);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.hero-left h3,
+.hero-left p {
+  overflow: hidden; /* Sembunyikan teks yang belum diketik */
+  white-space: nowrap; /* Pastikan teks tidak membungkus */
+  border-right: 2px solid var(--warna-utama); /* Tambahkan efek kursor */
+}
+.hero-right img {
+  width: 400px;
+  /* atau sesuai keinginan */
+}
+.hero-right img:hover {
+  transform: scale(1.05); /* Perbesar gambar saat di-hover */
+  transition: transform 0.3s ease; /* Tambahkan transisi untuk animasi */
+}
+/* Animasi untuk efek mengetik */
+@keyframes blink {
+  from {
+    border-color: transparent; /* Kursor tidak terlihat */
+  }
+  to {
+    border-color: var(--warna-utama); /* Kursor terlihat */
+  }
+}
+
+.hero-left h3,
+.hero-left p {
+  animation: blink 0.5s step-end infinite; /* Efek kursor berkedip */
+}
+
+/* end-section-hero */
+
+/* start-about-me */
+.about-me h2 {
+  text-align: center;
+  color: var(--warna-utama);
+}
+.container .card-about-me {
+  opacity: 0;
+  transform: translate(-80px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background-color: var(--warna-utama);
+  border-radius: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 500px;
+  gap: 20px;
+  margin-bottom: 15rem;
+}
+.card-about-me.show {
+  opacity: 1; /* Muncul */
+  transform: translateX(0); /* Kembali ke posisi semula */
+}
+.container .card-about-me img {
+  justify-content: center;
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+}
+.container .card-about-me p {
+  text-align: center;
+  color: var(--warna-begron);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.container .card-about-me:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+/* end-about-me */
+
+/* start-experience */
+.experience {
+  margin-bottom: 15rem;
+}
+.experience h2 {
+  color: var(--warna-utama);
+  text-align: center;
+}
+.container .card-internshipp {
+  opacity: 0;
+  transform: translate(-50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background-color: var(--warna-utama);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 500px;
+  gap: 20px;
+}
+
+.container .card-internshipp:hover {
+  transform: scale(1.05); /* Perbesar elemen saat di-hover */
+  transition: transform 0.3s ease; /* Tambahkan transisi untuk animasi */
+}
+.card-internshipp.show {
+  opacity: 1; /* Muncul */
+  transform: translateX(0); /* Kembali ke posisi semula */
+}
+.card-internshipp h2 {
+  font-size: large;
+  color: var(--warna-biru);
+  text-align: center;
+}
+.card-internshipp p {
+  color: var(--warna-begron);
+  text-align: center;
+}
+.card-internshipp img {
+  justify-content: center;
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+}
+
+/* start-projects */
+.project {
+  padding-top: 20px; /* Tambahkan ruang di atas untuk elemen <h3> */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+.project h2 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px;
+  color: var(--warna-utama);
+  text-align: center;
+}
+
+.kontainer .card-project {
+  opacity: 0;
+  transform: translate(-50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  flex: 0 0 auto;
+  margin-left: 0;
+  background-color: var(--warna-utama);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+  gap: 20px;
+  font-size: bolder;
+  color: var(--warna-utama);
+}
+.card-project.show {
+  opacity: 1; /* Muncul */
+  transform: translateX(0); /* Kembali ke posisi semula */
+}
+.card-project:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card-project h2 {
+  font-size: large;
+  color: var(--warna-biru);
+  text-align: center;
+}
+.card-project p {
+  color: var(--warna-begron);
+  text-align: center;
+}
+.card-project img {
+  justify-content: center;
+  border-radius: 10px;
+  width: 380px;
+  height: auto;
+}
+
+/* section-sosmed */
+.sosmed {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  fill: #03a9f4;
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.discord {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03a9f4;
+}
+
+.card2:hover .twitter {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card4:hover .spotify {
+  fill: white;
+}
+/* end-sosmed */
+
+/* start footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--warna-utama);
+}
+.footer h2 {
+  font-size: 1rem;
+  color: var(--warna-utama);
+  text-align: center;
+}
+.footer h2 a {
+  text-decoration: none;
+  color: var(--warna-biru);
+  transition: 0.5s ease-in-out;
+}

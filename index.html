@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="awfajrii" />
+    <title>awfajri's portofolio</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- iconn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- logo url -->
+    <link rel="icon" href="flower.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- START LOADER -->
+    <div id="loader-wrapper">
+      <div class="loader">
+        <span style="--d: 100ms">A</span>
+        <span style="--d: 250ms">W</span>
+        <span style="--d: 400ms">F</span>
+        <span style="--d: 550ms">A</span>
+        <span style="--d: 700ms">J</span>
+        <span style="--d: 850ms">R</span>
+        <span style="--d: 1000ms">I</span>
+        <span style="--d: 1150ms">I</span>
+      </div>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- musik -->
+    <audio class="song" loop autoplay>
+      <source
+        src="audio/Laufey - From The Start (Official Music Video).mp3"
+        type="audio/mpeg"
+      />
+      <p>Your browser does not support the audio element.</p>
+    </audio>
+    <!-- end musik -->
+
+    <!-- navbar-desktop -->
+    <div class="nav">
+      <div class="menu-wrap">
+        <a href="#hero">
+          <div class="logo">awfajrii</div>
+        </a>
+        <div class="menu h-xs">
+          <a href="#hero">
+            <div class="menu-item active">Home</div>
+          </a>
+          <a href="#about">
+            <div class="menu-item">About Me</div>
+          </a>
+          <a href="#Internship">
+            <div class="menu-item">Internship</div>
+          </a>
+          <a href="#konten">
+            <div class="menu-item">My Project</div>
+          </a>
+          <a href="#footer">
+            <div class="menu-item">Social Media</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- end navbar-desktop -->
+    <!-- navbar-mobile -->
+    <div class="nav">
+      <div class="menu-wrap">
+        <a href="#hero">
+          <div class="logo">awfajrii</div>
+        </a>
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu h-xs" id="menu">
+          <a href="#hero">
+            <div class="menu-item active">Home</div>
+          </a>
+          <a href="#about">
+            <div class="menu-item">About Me</div>
+          </a>
+          <a href="#Internship">
+            <div class="menu-item">Internship</div>
+          </a>
+          <a href="#konten">
+            <div class="menu-item">My Project</div>
+          </a>
+          <a href="#footer">
+            <div class="menu-item">Social Media</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- end-navbar-mobile -->
+
+    <!-- start-hero-section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-left">
+        <h3></h3>
+        <p></p>
+      </div>
+      <div class="hero-right">
+        <img src="/assets/Cool Guy.png" alt="hero-image" />
+      </div>
+    </section>
+    <!-- end-hero-section -->
+
+    <!-- start section about-me -->
+    <section class="about-me" id="about">
+      <h2>About me</h2>
+      <div class="container">
+        <div class="card-about-me">
+          <img src="/assets/auf.png" alt="foto-auf" />
+          <p>
+            I am a student of Informatics at Singaperbangsa University of
+            Karawang. i'm a UI/UX Designer and a Front-End Developer.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- end section about-me -->
+
+    <!-- start section internship -->
+    <section class="experience" id="Internship">
+      <h2>My Internship</h2>
+      <div class="container">
+        <div class="card-internshipp">
+          <img src="/assets/internship/accounting.jpg" alt="magang 1" />
+          <h2>PT. Advics Manufacturing Indonesia</h2>
+          <p>
+            Performed roles as a Finance and Accounting Intern during the period
+            of May 2023 to August 2023.
+          </p>
+        </div>
+        <div class="card-internshipp">
+          <img src="/assets/internship/graphical designer.jpg" alt="magang 2" />
+          <h2>PT. Wahana Internet Nusantara</h2>
+          <p>
+            Worked as a Content Creator Intern at Bnet Academy and handled sales
+            marketing from January 2023 to April 2023.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- end section internship -->
+
+    <!-- start section project -->
+    <section class="project" id="konten">
+      <h2>My Projects</h2>
+      <div class="kontainer">
+        <div class="card-project">
+          <img src="/assets/project/Kasetrusak - 3.png" alt="projek-1" />
+          <h2>Kasetrusak</h2>
+          <p>kasetrusak is an E-Commerce app.</p>
+        </div>
+        <div class="card-project">
+          <img src="/assets/project/himtalks.png" alt="projek-2" />
+          <h2>Himtalks</h2>
+          <p>Himtalks is a communication platform.</p>
+        </div>
+        <div class="card-project">
+          <img src="/assets/project/sejarah.png" alt="projek-3" />
+          <h2>Sejarah Himtika</h2>
+          <p>UI Design Page Sejarah Himtika</p>
+        </div>
+        <div class="card-project">
+          <img src="/assets/project/languika.png" alt="projek-4" />
+          <h2>Languika</h2>
+          <p>Languika is a language learning app.</p>
+        </div>
+        <div class="card-project">
+          <img src="/assets/project/open-project.png" alt="projek-5" />
+          <h2>Open Project</h2>
+          <p>Open Project is an organizer of project ideas.</p>
+        </div>
+        <div class="card-project">
+          <img src="/assets/project/filosofii.png" alt="projek-6" />
+          <h2>Filosofi Logo</h2>
+          <p>Formatiics 24' class logo philosophy design.</p>
+        </div>
+        <div class="card-project">
+          <img src="/assets//project/semantik.png" alt="projek-7" />
+          <h2>SEMANTIK 9.0</h2>
+          <p>SEMANTIK 9.0 is a competition for student</p>
+        </div>
+        <div class="card-project">
+          <img src="/assets/project/songfess.png" alt="projek-8" />
+          <h2>Songfess kelazzZz F</h2>
+          <p>Songfess is a platform to express ur feeling.</p>
+        </div>
+      </div>
+    </section>
+    <!-- end section project -->
+
+    <!-- section sosmed -->
+    <section class="sosmed" id="footer">
+      <div class="main">
+        <div class="up">
+          <button class="card1">
+            <a href="https://instagram.com/awfajrii">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0,0,256,256"
+                width="30px"
+                height="30px"
+                fill-rule="nonzero"
+                class="instagram"
+              >
+                <g
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g transform="scale(8,8)">
+                    <path
+                      d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </button>
+          <button class="card2">
+            <a href="http://twitter.com/awfajri1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                width="30px"
+                height="30px"
+                class="twitter"
+              >
+                <path
+                  d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                ></path>
+              </svg>
+            </a>
+          </button>
+        </div>
+        <div class="down">
+          <button class="card3">
+            <a href="https://github.com/awfajri">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 30 30"
+                width="30px"
+                height="30px"
+                class="github"
+              >
+                <path
+                  d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+                ></path>
+              </svg>
+            </a>
+          </button>
+          <button class="card4">
+            <a
+              href="https://open.spotify.com/user/31qkhmt3grbs3be5ulmruqbdpucq?si=k9EJeaCXT2aSLiXHbt-clg"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 168 168"
+                width="30px"
+                height="30px"
+                class="spotify"
+              >
+                <path
+                  fill="#1ED760"
+                  d="M84 0C37.7 0 0 37.7 0 84s37.7 84 84 84 84-37.7 84-84S130.3 0 84 0zm38.1 120.5c-1.5 2.5-4.8 3.3-7.3 1.8-20-12.3-45.3-15.1-75.2-8.3-2.8.7-5.7-1.1-6.4-3.9-.7-2.8 1.1-5.7 3.9-6.4 32.5-7.3 60.1-4.1 82.4 9.3 2.4 1.4 3.2 4.7 1.6 7.5zm10.4-20.6c-1.9 3-5.8 4-8.8 2.1-22.9-14-57.9-18-85.1-9.9-3.3 1-6.7-.9-7.7-4.2-1-3.3.9-6.7 4.2-7.7 31.2-9.1 70.2-4.6 96.2 11.1 3 1.9 3.9 5.8 2.1 8.6zm.4-21.9c-26.2-15.8-69.3-17.3-94.3-9.6-3.8 1.1-7.8-.9-8.9-4.7-1.1-3.8.9-7.8 4.7-8.9 28.6-8.4 76-6.7 106.4 11.4 3.3 2 4.4 6.2 2.4 9.5-2 3.4-6.2 4.5-9.5 2.3z"
+                />
+              </svg>
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <h2>
+          Created by
+          <a href="https://instagram.com/awfajrii">awfajrii</a>
+        </h2>
+      </div>
+    </section>
+    <!-- end section sosmed -->
+    <!-- java-script -->
+    <script src="js/index.js"></script>
+    <!-- end java-script -->
+  </body>
+</html>
